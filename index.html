@@ -23,7 +23,9 @@
    <a href="contact.html">Contact Us</a>
 
   </nav>
-
+ <div class="menu-toggle" id="menuToggle">
+    ☰
+  </div>
 </header>
  
   <!-- HERO SECTION -->
@@ -105,6 +107,14 @@ Whether you’re a beginner or a pro, you’ll feel right at home here. Be sure 
     </div>
   </div>
 </footer>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+</script>
 
 
 </body>

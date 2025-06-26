@@ -19,6 +19,9 @@
       <a href="track.html" class="active">Our Track</a>
       <a href="contact.html">Contact Us</a>
     </nav>
+     <div class="menu-toggle" id="menuToggle">
+    ☰
+  </div>
   </header>
 
   <!-- HERO BACKGROUND SECTION -->
@@ -99,6 +102,14 @@
 <!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+</script>
 
 
 </body>

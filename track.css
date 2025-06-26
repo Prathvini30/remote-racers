@@ -354,3 +354,34 @@ body {
   margin-right: 10px;
   color: #00aaff;
 }
+/* Hamburger icon hidden on desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile navbar */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border: 1px solid #222;
+    z-index: 100;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}

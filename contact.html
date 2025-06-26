@@ -19,6 +19,9 @@
       <a href="track.html">Our Track</a>
       <a href="contact.html" class="active">Contact Us</a>
     </nav>
+     <div class="menu-toggle" id="menuToggle">
+    ☰
+  </div>
       
   </header>
 
@@ -61,6 +64,14 @@
     </div>
   </footer>
 
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+</script>
 
 </body>
 </html>
