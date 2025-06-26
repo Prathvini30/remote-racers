@@ -1,0 +1,199 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* RESET & BASE */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+  margin-right: 40px;
+  white-space: nowrap;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00aaff;
+}
+
+.track-hero {
+  background-image: url('images/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 77vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.track-title {
+  font-size: 3.5rem;
+  font-family: 'Kaushan Script', cursive;
+  color: white;
+  margin-top: -100px; /* Use margin instead of top */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* GLASS CONTAINER */
+.glass-container {
+  display: flex;
+  gap: 40px;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.track-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.track-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.get-in-touch-title {
+  font-family: 'Kaushan Script', cursive; /* This sets the font */
+  color: #00aaff;                         /* Blue color */
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+
+.contact-description {
+  flex: 1;
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #000;
+  padding: 60px 40px;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #00aaff;
+  font-size: 1.6rem;
+  background-color: #111;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #00aaff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.contact-title {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.6rem;
+  color: #00ccff;
+  margin-bottom: 15px;
+  margin-right: 60px;
+}
+
+.footer-right p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 60px;
+}
+
+.footer-right i {
+  margin-right: 10px;
+  color: #00aaff;
+}
