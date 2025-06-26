@@ -192,6 +192,7 @@ section {
 .visit-map {
   flex: 1;
   min-width: 300px;
+  width: 100%;
 }
 
 .visit-map img {
@@ -350,4 +351,19 @@ section {
 
 .slide-in-right {
   animation: slideInRight 1.2s ease-out forwards;
+}
+@media screen and (max-width: 768px) {
+  .visit-section {
+    flex-direction: column;
+  }
+
+  .visit-map iframe {
+    width: 100% !important;
+    height: 300px !important;
+  }
+
+  .visit-text {
+    padding: 20px;
+    text-align: center;
+  }
 }
