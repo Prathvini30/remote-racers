@@ -17,7 +17,7 @@
     <div class="menu-toggle" id="menuToggle">
     ☰
   </div>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navMenu">
       <a href="index.html">Home</a>
       <a href="track.html" class="active">Our Track</a>
       <a href="contact.html">Contact Us</a>
@@ -47,25 +47,26 @@
         Come experience the unique challenges and adrenaline-fueled fun of our drift course and see why it’s a favourite destination for RC enthusiasts of all levels.
       </p>
       <h2 class="stats-heading">Track Stats</h2>
-<div class="track-stats-row">
+
+ <div class="track-stats-row">
   <div class="stat-box">
-    <div class="stat-number">32+</div>
+    <div class="stat-number" data-target="32">0</div>
     <div class="stat-label">Pit Stations</div>
   </div>
   <div class="stat-box">
-    <div class="stat-number">100+</div>
+    <div class="stat-number" data-target="100">0</div>
     <div class="stat-label">Track Size (sq/mt)</div>
   </div>
   <div class="stat-box">
-    <div class="stat-number">6+</div>
+    <div class="stat-number" data-target="6">0</div>
     <div class="stat-label">Technical Corners</div>
   </div>
   <div class="stat-box">
-    <div class="stat-number">100%</div>
-    <div class="stat-label">Vibes</div>
+    <div class="stat-number" data-target="100">0</div>
+    <div class="stat-label">Vibes (%)</div>
   </div>
 </div>
-    </div>
+
   </section>
   <section class="rc-gallery">
   <h2 class="gallery-heading">Explore Our RC Cars</h2>
@@ -110,6 +111,43 @@
   menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("show");
   });
+</script>
+<script>
+  const statElements = document.querySelectorAll('.stat-number');
+
+  const animateStats = () => {
+    statElements.forEach(el => {
+      const target = +el.getAttribute('data-target');
+      const isPercent = el.nextElementSibling?.textContent.includes('%');
+      let count = 0;
+
+      const updateCount = () => {
+        const speed = 20;
+        const increment = Math.ceil(target / 50);
+
+        if (count < target) {
+          count += increment;
+          el.textContent = count + (isPercent ? '%' : '+');
+          setTimeout(updateCount, speed);
+        } else {
+          el.textContent = target + (isPercent ? '%' : '+');
+        }
+      };
+
+      el.classList.add('animate');
+      updateCount();
+    });
+  };
+
+  // Trigger once when stats section is visible
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateStats();
+      observer.disconnect();
+    }
+  }, { threshold: 0.4 });
+
+  observer.observe(document.querySelector('.track-stats-row'));
 </script>
 
 

@@ -16,14 +16,13 @@ section {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* ✅ This is important! */
+  justify-content: flex-start; /* 👈 align all items to the left */
   padding: 20px 20px;
   background-color: #000;
   position: fixed;
-  top: 0;
   width: 100%;
   z-index: 10;
-   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  gap: 40px; /* 👈 add spacing between logo and links */
 }
 
 /* Logo stays left */
@@ -31,7 +30,6 @@ section {
   color: white;
   font-weight: bold;
   font-size: 1.3rem;
-  margin-right: 40px;
   white-space: nowrap;
 }
 
@@ -56,8 +54,9 @@ section {
 /* Hide hamburger on desktop */
 .menu-toggle {
   display: none;
+   margin-left: auto;
+   margin-right: 50px;
 }
-
 
 /* HERO SECTION */
 .hero {
@@ -150,6 +149,18 @@ section {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+/* Scroll animation styles */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-out;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* OUR GOAL SECTION */
 .goal-section {
   display: flex;
@@ -399,4 +410,12 @@ section {
   cursor: pointer;
 }
 }
-
+@media screen and (max-width: 768px) {
+  .visit-us-btn {
+    width: 80%;
+    left: 10%;
+    bottom:40px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}

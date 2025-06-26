@@ -49,6 +49,11 @@ body {
 .nav-links a.active {
   color: #00aaff;
 }
+.menu-toggle {
+  display: none;
+   margin-left: auto;
+   margin-right: 50px;
+}
 
 .track-hero {
   background-image: url('images/contact-bg.jpg');
