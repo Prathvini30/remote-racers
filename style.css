@@ -16,12 +16,14 @@ section {
 .navbar {
   display: flex;
   align-items: center;
-  padding: 20px 40px;
+  justify-content: space-between; /* ✅ This is important! */
+  padding: 20px 20px;
   background-color: #000;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
+   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 /* Logo stays left */
@@ -390,12 +392,11 @@ section {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
-  }
+ .menu-toggle {
+  display: block;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
 }
 
