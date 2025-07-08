@@ -1,4 +1,4 @@
-/* Base Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +17,6 @@ section {
   text-align: center;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -75,7 +74,7 @@ section {
   color: #00bcd4;
 }
 
-/* HERO SECTION */
+
 .hero {
   background-image: url('images/hero.jpg');
   background-size: cover;
@@ -119,7 +118,6 @@ section {
   background-color: #c30000;
 }
 
-/* INTRO SECTION */
 .intro-section {
   display: flex;
   flex-wrap: wrap;
@@ -157,7 +155,6 @@ section {
   text-align: justify;
 }
 
-/* GOAL SECTION */
 .goal-section {
   display: flex;
   flex-wrap: wrap;
@@ -187,7 +184,6 @@ section {
   text-align: justify;
 }
 
-/* VISIT SECTION */
 .visit-section {
   display: flex;
   flex-wrap: wrap;
@@ -217,7 +213,6 @@ section {
   text-align: justify;
 }
 
-/* FOOTER */
 .footer {
   background-color: #000;
   padding: 60px 40px;
@@ -266,7 +261,7 @@ section {
   color: #ccc;
 }
 
-/* Responsive */
+
 @media screen and (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -306,7 +301,6 @@ section {
   }
 }
 
-/* Animations */
 @keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -325,7 +319,6 @@ section {
   display: none;
 }
 
-/* Show hamburger only on mobile */
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
