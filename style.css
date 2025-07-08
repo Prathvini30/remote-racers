@@ -286,8 +286,6 @@ section {
     display: block;
   }
 
-  .visit-section,
-  .goal-section,
   .intro-section {
     flex-direction: column;
   }

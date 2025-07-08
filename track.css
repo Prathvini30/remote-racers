@@ -12,8 +12,6 @@ body {
   color: #f2f2f2;
   line-height: 1.6;
 
-  overflow-x: hidden;
-  max-width: 100%;
 
 }
 
@@ -416,13 +414,16 @@ section {
     font-weight: 500;
     padding: 10px 0;
   }
+  .slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+.menu-toggle {
+  display: none;
+}
 
   .menu-toggle {
     display: block;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
+    
   }
 }
 @media screen and (max-width: 768px) {
