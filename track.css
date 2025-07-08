@@ -425,4 +425,26 @@ section {
     display: flex;
   }
 }
+@media screen and (max-width: 768px) {
+  .glass-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .track-image {
+    order: 1;
+    padding: 10px 20px;
+  }
+
+  .track-description {
+    order: 2;
+    padding: 20px;
+  }
+
+  .track-image img {
+    height: auto !important; /* ✅ Reset any fixed height */
+    width: 100%;
+    max-height: 250px; /* Optional: limit it */
+  }
+}
 
