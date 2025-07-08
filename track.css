@@ -1,62 +1,84 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-
-/* RESET */
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  color: white;
+  box-sizing: border-box;
 }
 
-/* NAVIGATION BAR */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #111;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Navbar */
 .navbar {
-   display: flex;
+  display: flex;
   align-items: center;
-  justify-content: flex-start; /* 👈 align all items to the left */
-  padding: 20px 20px;
+  justify-content: space-between;
   background-color: #000;
+  padding: 15px 40px;
   position: fixed;
+  top: 0;
   width: 100%;
-  z-index: 10;
-  gap: 40px;
+  z-index: 1000;
+  border-bottom: 2px solid #00bcd4;
 }
 
-.logo-text {
-  font-weight: bold;
-  font-size: 1.4rem;
+.logo-img {
+  height: 60px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
   color: white;
-  margin-right: 40px;
-  white-space: nowrap;
-  font-family: 'Kaushan Script', cursive;
+  cursor: pointer;
 }
 
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 
 .nav-links a {
-  color: white;
+  color: #f2f2f2;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
+  position: relative;
 }
 
-
-.nav-links a.active {
-  color: #00aaff;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #00bcd4;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
 }
-.menu-toggle {
-  display: none;
-   margin-left: auto;
-   margin-right: 50px;
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
 }
 
 /* HERO SECTION */
 .track-hero {
-  background-image: url('images/track-bg.jpg');
+  background-image: url('images/track-bg2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -350,18 +372,18 @@ body {
 
 
 .footer-right p {
-  margin: 8px 0;
+  margin: 10px 0;
   font-size: 1rem;
   color: #ccc;
    align-items: flex-end;
   white-space: nowrap; /* Ensures single-line address */
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 60px;
+  
 }
 
 .footer-right i {
-  margin-right: 10px;
+  margin-right: 50px;
   color: #00aaff;
 }
 /* Hamburger icon hidden on desktop */
@@ -372,27 +394,32 @@ body {
 /* Mobile navbar */
 @media screen and (max-width: 768px) {
   .nav-links {
-    display: none;
     flex-direction: column;
     background-color: #000;
     position: absolute;
     top: 60px;
     right: 20px;
     padding: 15px;
-    border: 1px solid #222;
-    z-index: 100;
+    display: none;
   }
 
   .nav-links.show {
     display: flex;
   }
 
- .menu-toggle {
-  display: block;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
+  .nav-links a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .glass-container { 
@@ -412,5 +439,29 @@ body {
 
   .track-description p {
     text-align: justify;
+  }
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Show hamburger only on mobile */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #000;
+    padding: 15px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 }
