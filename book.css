@@ -195,7 +195,6 @@ section {
   display: none;
 }
 
-/* Show hamburger only on mobile */
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
